@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="activity"
+            type="melikeey.face.detection.ui.main.MainActivity" />
+    </data>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fireTopLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000"
     android:keepScreenOn="true">
 
-    <amir.face.detection.utils.common.CameraSourcePreview
+    <melikeey.face.detection.utils.common.CameraSourcePreview
         android:id="@+id/firePreview"
         android:layout_width="match_parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -16,7 +23,7 @@
         android:layout_height="match_parent">
 
 
-        <amir.face.detection.utils.common.GraphicOverlay
+        <melikeey.face.detection.utils.common.GraphicOverlay
             android:id="@+id/fireFaceOverlay"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -31,10 +38,9 @@
             android:elevation="2dp"
             android:padding="56dp"
             android:scaleType="fitXY"
-            android:src="@drawable/face_shape"
-            android:tint="#F33131" />
+            android:src="@drawable/face_shape" />
 
-    </amir.face.detection.utils.common.CameraSourcePreview>
+    </melikeey.face.detection.utils.common.CameraSourcePreview>
 
     <Button
         android:id="@+id/takePhoto"
@@ -47,8 +53,9 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/button_selector"
         android:enabled="false"
+        android:visibility="gone"
         android:foreground="?android:attr/selectableItemBackground"
-        android:text="@string/take_photo"
+        android:text="@string/get_status"
         android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="@+id/firePreview"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +69,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="60dp"
-        android:text="Please Open your left eye"
+        android:text="@string/please_open_your_left_eye"
         android:textColor="#fff"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/takePhoto"
@@ -80,11 +87,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="28dp"
-        android:text="Please Open your right eye"
+        android:text="@string/please_open_your_right_eye"
         android:textColor="#fff"
-        app:layout_constraintBottom_toTopOf="@+id/takePhoto"
+        app:layout_goneMarginTop="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/smile_rating"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintVertical_bias="0.034"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/leftEyeStatus" />
 
@@ -100,7 +109,7 @@
         android:layout_marginBottom="8dp"
         android:adjustViewBounds="true"
         android:minHeight="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/takePhoto"
+        app:layout_constraintBottom_toTopOf="@+id/smile_rating"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.975"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,3 +125,4 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

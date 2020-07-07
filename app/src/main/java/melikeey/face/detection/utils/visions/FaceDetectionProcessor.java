@@ -11,7 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-package amir.face.detection.utils.visions;
+package melikeey.face.detection.utils.visions;
 
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -32,14 +32,14 @@ import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetectorOptions;
 import java.io.IOException;
 import java.util.List;
 
-import amir.face.detection.R;
-import amir.face.detection.utils.common.CameraImageGraphic;
-import amir.face.detection.utils.interfaces.FaceDetectStatus;
-import amir.face.detection.utils.common.FrameMetadata;
-import amir.face.detection.utils.interfaces.FrameReturn;
-import amir.face.detection.utils.common.GraphicOverlay;
-import amir.face.detection.utils.common.VisionProcessorBase;
-import amir.face.detection.utils.models.RectModel;
+import melikeey.face.detection.R;
+import melikeey.face.detection.utils.common.CameraImageGraphic;
+import melikeey.face.detection.utils.interfaces.FaceDetectStatus;
+import melikeey.face.detection.utils.common.FrameMetadata;
+import melikeey.face.detection.utils.interfaces.FrameReturn;
+import melikeey.face.detection.utils.common.GraphicOverlay;
+import melikeey.face.detection.utils.common.VisionProcessorBase;
+import melikeey.face.detection.utils.models.RectModel;
 
 
 public class FaceDetectionProcessor extends VisionProcessorBase<List<FirebaseVisionFace>> implements FaceDetectStatus {

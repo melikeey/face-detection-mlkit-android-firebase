@@ -1,14 +1,12 @@
-package amir.face.detection.utils.base;
+package melikeey.face.detection.utils.base;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.DisplayMetrics;
-import android.view.Display;
 
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;

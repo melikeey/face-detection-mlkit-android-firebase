@@ -12,20 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package amir.face.detection.utils.visions;
+package melikeey.face.detection.utils.visions;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.util.Log;
 
-import com.google.android.gms.vision.CameraSource;
 import com.google.firebase.ml.vision.face.FirebaseVisionFace;
 
-import amir.face.detection.utils.interfaces.FaceDetectStatus;
-import amir.face.detection.utils.common.GraphicOverlay;
-import amir.face.detection.utils.models.RectModel;
+import melikeey.face.detection.utils.interfaces.FaceDetectStatus;
+import melikeey.face.detection.utils.common.GraphicOverlay;
+import melikeey.face.detection.utils.models.RectModel;
 
 
 /**
@@ -36,15 +34,11 @@ public class FaceGraphic extends GraphicOverlay.Graphic {
     private static final float ID_TEXT_SIZE = 30.0f;
     private static final float BOX_STROKE_WIDTH = 5.0f;
 
-    private int facing;
-
     private final Paint facePositionPaint;
     private final Paint idPaint;
     private final Paint boxPaint;
 
     private volatile FirebaseVisionFace firebaseVisionFace;
-
-    private final Bitmap overlayBitmap;
 
     FaceDetectStatus faceDetectStatus = null;
 
@@ -53,8 +47,6 @@ public class FaceGraphic extends GraphicOverlay.Graphic {
         super(overlay);
 
         firebaseVisionFace = face;
-        this.facing = facing;
-        this.overlayBitmap = overlayBitmap;
         final int selectedColor = Color.GREEN;
 
         facePositionPaint = new Paint();

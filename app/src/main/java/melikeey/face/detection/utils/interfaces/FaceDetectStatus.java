@@ -1,6 +1,6 @@
-package amir.face.detection.utils.interfaces;
+package melikeey.face.detection.utils.interfaces;
 
-import amir.face.detection.utils.models.RectModel;
+import melikeey.face.detection.utils.models.RectModel;
 
 public interface FaceDetectStatus {
     void onFaceLocated(RectModel rectModel);

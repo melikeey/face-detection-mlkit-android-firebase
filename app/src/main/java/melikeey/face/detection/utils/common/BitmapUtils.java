@@ -1,4 +1,4 @@
-package amir.face.detection.utils.common;
+package melikeey.face.detection.utils.common;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

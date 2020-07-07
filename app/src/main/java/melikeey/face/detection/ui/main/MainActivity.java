@@ -11,14 +11,12 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-package amir.face.detection.ui.main;
+package melikeey.face.detection.ui.main;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -33,26 +31,23 @@ import com.hsalf.smilerating.SmileRating;
 
 import java.io.IOException;
 
-import amir.face.detection.R;
-import amir.face.detection.ui.photo_viewer.PhotoViewerActivity;
-import amir.face.detection.utils.base.BaseActivity;
-import amir.face.detection.utils.base.Cons;
-import amir.face.detection.utils.common.CameraSource;
-import amir.face.detection.utils.common.CameraSourcePreview;
-import amir.face.detection.utils.interfaces.FaceDetectStatus;
-import amir.face.detection.utils.common.FrameMetadata;
-import amir.face.detection.utils.interfaces.FrameReturn;
-import amir.face.detection.utils.common.GraphicOverlay;
-import amir.face.detection.utils.base.PublicMethods;
-import amir.face.detection.utils.models.RectModel;
-import amir.face.detection.utils.visions.FaceDetectionProcessor;
+import melikeey.face.detection.R;
+import melikeey.face.detection.utils.base.BaseActivity;
+import melikeey.face.detection.utils.common.CameraSource;
+import melikeey.face.detection.utils.common.CameraSourcePreview;
+import melikeey.face.detection.utils.interfaces.FaceDetectStatus;
+import melikeey.face.detection.utils.common.FrameMetadata;
+import melikeey.face.detection.utils.interfaces.FrameReturn;
+import melikeey.face.detection.utils.common.GraphicOverlay;
+import melikeey.face.detection.utils.base.PublicMethods;
+import melikeey.face.detection.utils.models.RectModel;
+import melikeey.face.detection.utils.visions.FaceDetectionProcessor;
 
-import static amir.face.detection.utils.base.Cons.IMG_EXTRA_KEY;
 
 
 @KeepName
-public final class MainActivity extends BaseActivity
-        implements OnRequestPermissionsResultCallback, FrameReturn, FaceDetectStatus {
+public final class MainActivity extends BaseActivity implements OnRequestPermissionsResultCallback, FrameReturn, FaceDetectStatus {
+
     private static final String FACE_DETECTION = "Face Detection";
     private static final String TAG = "MLKitTAG";
 
@@ -61,19 +56,13 @@ public final class MainActivity extends BaseActivity
     private CameraSourcePreview preview;
     private GraphicOverlay graphicOverlay;
     private ImageView faceFrame;
-    private ImageView test;
-    private Button takePhoto;
     private SmileRating smile_rating;
-    private Bitmap croppedImage = null;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        test = findViewById(R.id.test);
         preview = findViewById(R.id.firePreview);
-        takePhoto = findViewById(R.id.takePhoto);
         faceFrame = findViewById(R.id.faceFrame);
         graphicOverlay = findViewById(R.id.fireFaceOverlay);
         smile_rating = findViewById(R.id.smile_rating);
@@ -84,7 +73,6 @@ public final class MainActivity extends BaseActivity
             PublicMethods.getRuntimePermissions(this);
         }
 
-        takePhoto.setOnClickListener(v -> takePhoto());
     }
 
 
@@ -106,7 +94,6 @@ public final class MainActivity extends BaseActivity
                     .show();
         }
     }
-
 
     private void startCameraSource() {
         if (cameraSource != null) {
@@ -182,33 +169,11 @@ public final class MainActivity extends BaseActivity
     @Override
     public void onFaceLocated(RectModel rectModel) {
         faceFrame.setColorFilter(ContextCompat.getColor(this, R.color.green));
-        takePhoto.setEnabled(true);
 
-        float left = (float) (originalImage.getWidth() * 0.2);
-        float newWidth = (float) (originalImage.getWidth() * 0.6);
-
-        float top = (float) (originalImage.getHeight() * 0.2);
-        float newHeight = (float) (originalImage.getHeight() * 0.6);
-        croppedImage =
-                Bitmap.createBitmap(originalImage,
-                        ((int) (left)),
-                        (int) (top),
-                        ((int) (newWidth)),
-                        (int) (newHeight));
-        test.setImageBitmap(croppedImage);
-    }
-
-    private void takePhoto() {
-        if (croppedImage != null) {
-            String path = PublicMethods.saveToInternalStorage(croppedImage, Cons.IMG_FILE, mActivity);
-            startActivity(new Intent(mActivity, PhotoViewerActivity.class)
-                    .putExtra(IMG_EXTRA_KEY, path));
-        }
     }
 
     @Override
     public void onFaceNotLocated() {
         faceFrame.setColorFilter(ContextCompat.getColor(this, R.color.red));
-        takePhoto.setEnabled(false);
     }
 }

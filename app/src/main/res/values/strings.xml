@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Face Detection</string>
-    <string name="take_photo">Take Photo</string>
+    <string name="get_status">Get Status</string>
+    <string name="please_open_your_left_eye">Please Open your left eye</string>
+    <string name="please_open_your_right_eye">Please Open your right eye</string>
 </resources>

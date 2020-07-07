@@ -11,7 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-package amir.face.detection.utils.common;
+package melikeey.face.detection.utils.common;
 
 import android.graphics.Bitmap;
 
@@ -27,7 +27,7 @@ import com.google.firebase.ml.vision.common.FirebaseVisionImageMetadata;
 
 import java.nio.ByteBuffer;
 
-import amir.face.detection.utils.interfaces.VisionImageProcessor;
+import melikeey.face.detection.utils.interfaces.VisionImageProcessor;
 
 
 public abstract class VisionProcessorBase<T> implements VisionImageProcessor {

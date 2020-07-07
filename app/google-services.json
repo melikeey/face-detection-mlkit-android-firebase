@@ -1,79 +1,34 @@
 {
   "project_info": {
-    "project_number": "466285397633",
-    "firebase_url": "https://personal-projects-aeed5.firebaseio.com",
-    "project_id": "personal-projects-aeed5",
-    "storage_bucket": "personal-projects-aeed5.appspot.com"
+    "project_number": "215154916424",
+    "firebase_url": "https://facedetection-a6dac.firebaseio.com",
+    "project_id": "facedetection-a6dac",
+    "storage_bucket": "facedetection-a6dac.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:466285397633:android:e6bb21d9240cbb6d",
+        "mobilesdk_app_id": "1:215154916424:android:26b1ed6d06c8cf0ddc6c7d",
         "android_client_info": {
-          "package_name": "amir.face.detection"
+          "package_name": "melikeey.face.detection"
         }
       },
       "oauth_client": [
         {
-          "client_id": "466285397633-2bp8m24iegful4co1uk50cf3imp7eftp.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "amir.face.detection",
-            "certificate_hash": "1891056ca923e250e61e4a33d73b8ea0bcdfad57"
-          }
-        },
-        {
-          "client_id": "466285397633-8b7pbgcb3gs0046954uv8fpn4s38jn4q.apps.googleusercontent.com",
+          "client_id": "215154916424-s97sdq9q3v8mk6cj0ktqaj5v9dl5a9fv.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDEMh5y5PAbU6d2D9FR6dlnjFP0A8Ku1ZI"
+          "current_key": "AIzaSyDEm0CYxroCcz3fho2FtSMz-8354jcjIZ4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "466285397633-8b7pbgcb3gs0046954uv8fpn4s38jn4q.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:466285397633:android:e84aa5688c30a461",
-        "android_client_info": {
-          "package_name": "amir.test"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "466285397633-0srkjhj3i1nvjhveuboni0a75eovc68u.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "amir.test",
-            "certificate_hash": "1891056ca923e250e61e4a33d73b8ea0bcdfad57"
-          }
-        },
-        {
-          "client_id": "466285397633-8b7pbgcb3gs0046954uv8fpn4s38jn4q.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDEMh5y5PAbU6d2D9FR6dlnjFP0A8Ku1ZI"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "466285397633-8b7pbgcb3gs0046954uv8fpn4s38jn4q.apps.googleusercontent.com",
+              "client_id": "215154916424-s97sdq9q3v8mk6cj0ktqaj5v9dl5a9fv.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

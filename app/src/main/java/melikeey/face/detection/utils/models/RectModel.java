@@ -1,4 +1,4 @@
-package amir.face.detection.utils.models;
+package melikeey.face.detection.utils.models;
 
 public class RectModel {
     private float left,top, right,bottom ;

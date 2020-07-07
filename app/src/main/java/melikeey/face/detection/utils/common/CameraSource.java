@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package amir.face.detection.utils.common;
+package melikeey.face.detection.utils.common;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -40,7 +40,7 @@ import java.util.IdentityHashMap;
 import java.util.List;
 import java.util.Map;
 
-import amir.face.detection.utils.interfaces.VisionImageProcessor;
+import melikeey.face.detection.utils.interfaces.VisionImageProcessor;
 
 /**
  * Manages the camera and allows UI updates on top of it (e.g. overlaying extra Graphics or
